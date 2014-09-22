@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		452A126619D03B6500E1E217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A126519D03B6500E1E217 /* AppDelegate.swift */; };
+		452A126819D03B6500E1E217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A126719D03B6500E1E217 /* ViewController.swift */; };
+		452A126B19D03B6500E1E217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452A126919D03B6500E1E217 /* Main.storyboard */; };
+		452A126D19D03B6500E1E217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452A126C19D03B6500E1E217 /* Images.xcassets */; };
+		452A127019D03B6500E1E217 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452A126E19D03B6500E1E217 /* LaunchScreen.xib */; };
+		452A127C19D03B6500E1E217 /* ChoozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A127B19D03B6500E1E217 /* ChoozeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		452A127619D03B6500E1E217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 452A125819D03B6500E1E217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 452A125F19D03B6500E1E217;
+			remoteInfo = Chooze;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		452A126019D03B6500E1E217 /* Chooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		452A126419D03B6500E1E217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452A126519D03B6500E1E217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		452A126719D03B6500E1E217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		452A126A19D03B6500E1E217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		452A126C19D03B6500E1E217 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		452A126F19D03B6500E1E217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		452A127519D03B6500E1E217 /* ChoozeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChoozeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		452A127A19D03B6500E1E217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452A127B19D03B6500E1E217 /* ChoozeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoozeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		452A125D19D03B6500E1E217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A127219D03B6500E1E217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		452A125719D03B6500E1E217 = {
+			isa = PBXGroup;
+			children = (
+				452A126219D03B6500E1E217 /* Chooze */,
+				452A127819D03B6500E1E217 /* ChoozeTests */,
+				452A126119D03B6500E1E217 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		452A126119D03B6500E1E217 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				452A126019D03B6500E1E217 /* Chooze.app */,
+				452A127519D03B6500E1E217 /* ChoozeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		452A126219D03B6500E1E217 /* Chooze */ = {
+			isa = PBXGroup;
+			children = (
+				452A126519D03B6500E1E217 /* AppDelegate.swift */,
+				452A126719D03B6500E1E217 /* ViewController.swift */,
+				452A126919D03B6500E1E217 /* Main.storyboard */,
+				452A126C19D03B6500E1E217 /* Images.xcassets */,
+				452A126E19D03B6500E1E217 /* LaunchScreen.xib */,
+				452A126319D03B6500E1E217 /* Supporting Files */,
+			);
+			path = Chooze;
+			sourceTree = "<group>";
+		};
+		452A126319D03B6500E1E217 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452A126419D03B6500E1E217 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		452A127819D03B6500E1E217 /* ChoozeTests */ = {
+			isa = PBXGroup;
+			children = (
+				452A127B19D03B6500E1E217 /* ChoozeTests.swift */,
+				452A127919D03B6500E1E217 /* Supporting Files */,
+			);
+			path = ChoozeTests;
+			sourceTree = "<group>";
+		};
+		452A127919D03B6500E1E217 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452A127A19D03B6500E1E217 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		452A125F19D03B6500E1E217 /* Chooze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452A127F19D03B6500E1E217 /* Build configuration list for PBXNativeTarget "Chooze" */;
+			buildPhases = (
+				452A125C19D03B6500E1E217 /* Sources */,
+				452A125D19D03B6500E1E217 /* Frameworks */,
+				452A125E19D03B6500E1E217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chooze;
+			productName = Chooze;
+			productReference = 452A126019D03B6500E1E217 /* Chooze.app */;
+			productType = "com.apple.product-type.application";
+		};
+		452A127419D03B6500E1E217 /* ChoozeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 452A128219D03B6500E1E217 /* Build configuration list for PBXNativeTarget "ChoozeTests" */;
+			buildPhases = (
+				452A127119D03B6500E1E217 /* Sources */,
+				452A127219D03B6500E1E217 /* Frameworks */,
+				452A127319D03B6500E1E217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				452A127719D03B6500E1E217 /* PBXTargetDependency */,
+			);
+			name = ChoozeTests;
+			productName = ChoozeTests;
+			productReference = 452A127519D03B6500E1E217 /* ChoozeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		452A125819D03B6500E1E217 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = BlueGene;
+				TargetAttributes = {
+					452A125F19D03B6500E1E217 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					452A127419D03B6500E1E217 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 452A125F19D03B6500E1E217;
+					};
+				};
+			};
+			buildConfigurationList = 452A125B19D03B6500E1E217 /* Build configuration list for PBXProject "Chooze" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 452A125719D03B6500E1E217;
+			productRefGroup = 452A126119D03B6500E1E217 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				452A125F19D03B6500E1E217 /* Chooze */,
+				452A127419D03B6500E1E217 /* ChoozeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		452A125E19D03B6500E1E217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A126B19D03B6500E1E217 /* Main.storyboard in Resources */,
+				452A127019D03B6500E1E217 /* LaunchScreen.xib in Resources */,
+				452A126D19D03B6500E1E217 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A127319D03B6500E1E217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		452A125C19D03B6500E1E217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A126819D03B6500E1E217 /* ViewController.swift in Sources */,
+				452A126619D03B6500E1E217 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452A127119D03B6500E1E217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				452A127C19D03B6500E1E217 /* ChoozeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		452A127719D03B6500E1E217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 452A125F19D03B6500E1E217 /* Chooze */;
+			targetProxy = 452A127619D03B6500E1E217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		452A126919D03B6500E1E217 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452A126A19D03B6500E1E217 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		452A126E19D03B6500E1E217 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				452A126F19D03B6500E1E217 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		452A127D19D03B6500E1E217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		452A127E19D03B6500E1E217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		452A128019D03B6500E1E217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chooze/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		452A128119D03B6500E1E217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chooze/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		452A128319D03B6500E1E217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChoozeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chooze.app/Chooze";
+			};
+			name = Debug;
+		};
+		452A128419D03B6500E1E217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ChoozeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chooze.app/Chooze";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		452A125B19D03B6500E1E217 /* Build configuration list for PBXProject "Chooze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A127D19D03B6500E1E217 /* Debug */,
+				452A127E19D03B6500E1E217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		452A127F19D03B6500E1E217 /* Build configuration list for PBXNativeTarget "Chooze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A128019D03B6500E1E217 /* Debug */,
+				452A128119D03B6500E1E217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		452A128219D03B6500E1E217 /* Build configuration list for PBXNativeTarget "ChoozeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				452A128319D03B6500E1E217 /* Debug */,
+				452A128419D03B6500E1E217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 452A125819D03B6500E1E217 /* Project object */;
+}
