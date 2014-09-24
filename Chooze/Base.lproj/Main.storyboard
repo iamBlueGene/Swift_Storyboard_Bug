@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -176,8 +176,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="2rj-uX-JX0"/>
                     <connections>
-                        <outlet property="faqButtonVerticalSpaceConstrain" destination="4ua-WF-h9v" id="jJS-Mg-MBf"/>
-                        <outlet property="inviteButtonVerticalSpaceConstrain" destination="no2-9g-TOR" id="aob-an-f5j"/>
+                        <outlet property="faqButtonVerticalSpaceConstrain" destination="4ua-WF-h9v" id="spU-fV-Fe4"/>
+                        <outlet property="inviteButtonVerticalSpaceConstrain" destination="no2-9g-TOR" id="b6E-i1-N2r"/>
                         <segue destination="jLn-Rn-Vg3" kind="show" identifier="LogIn" id="fX9-zu-BXb"/>
                     </connections>
                 </viewController>
@@ -217,6 +217,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vz1-C7-caB"/>
+                    <connections>
+                        <segue destination="9QE-58-CyH" kind="show" identifier="test" id="AqV-Q5-NLF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0d-Yt-kpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -249,4 +252,7 @@
         <image name="mainScreenGetUnlimitedTestsButtonImage" width="283" height="58"/>
         <image name="mainScreenInviteFriendsButtonImage" width="85" height="110"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JPU-RN-pOf"/>
+    </inferredMetricsTieBreakers>
 </document>

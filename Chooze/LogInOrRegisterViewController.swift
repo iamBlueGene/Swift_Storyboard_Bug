@@ -8,19 +8,20 @@
 
 import UIKit
 
-class LogInOrRegisterViewController: ViewController {
+class LogInOrRegisterViewController: UIViewController {
     
     var shouldHideBackButton = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       // performSegueWithIdentifier("test", sender: nil)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.hidden = false
-        navigationItem.hidesBackButton = shouldHideBackButton
+       // self.navigationController?.navigationBar.hidden = false
+       // navigationItem.hidesBackButton = shouldHideBackButton
     }
     
     override func didReceiveMemoryWarning() {

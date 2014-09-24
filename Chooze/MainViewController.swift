@@ -1,15 +1,14 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Chooze
 //
-//  Created by Eliyahu Braginskiy on 9/22/14.
+//  Created by Eliyahu Braginskiy on 9/24/14.
 //  Copyright (c) 2014 BlueGene. All rights reserved.
 //
 
 import UIKit
 
-
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let k_smallScreenSizeConstant:CGFloat = 30
     let k_isSmallScreen = UIScreen.mainScreen().bounds.size.height == 480 ? true:false
@@ -18,8 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var faqButtonVerticalSpaceConstrain: NSLayoutConstraint!
     @IBOutlet weak var inviteButtonVerticalSpaceConstrain: NSLayoutConstraint!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,9 +29,9 @@ class ViewController: UIViewController {
         
         if PFUser.currentUser() == nil {
             shouldAllowBackButton = false
-            //performSegueWithIdentifier("LogIn", sender: self)
+            performSegueWithIdentifier("LogIn", sender: nil)
         }
-
+        
         
     }
     
@@ -41,17 +39,18 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.hidden = true
         
-     
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.hidden = false
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,7 +74,7 @@ class ViewController: UIViewController {
             performSegueWithIdentifier("LogIn", sender: self)
         }
     }
-
+    
     // MARK: - Helper Methods
     func isIphone4Model() {
         if k_isSmallScreen {
@@ -83,7 +82,6 @@ class ViewController: UIViewController {
             self.inviteButtonVerticalSpaceConstrain.constant -= k_smallScreenSizeConstant
         }
     }
-    
+
 
 }
-
