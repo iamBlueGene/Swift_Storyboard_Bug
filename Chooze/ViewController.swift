@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         
         if PFUser.currentUser() == nil {
             shouldAllowBackButton = false
-            self.performSegueWithIdentifier("LogIn", sender: self)
+            //performSegueWithIdentifier("LogIn", sender: self)
         }
 
         
@@ -48,6 +48,9 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dzN-Ad-eJ1">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -48,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9QE-58-CyH" kind="show" identifier="name2" id="JPU-RN-pOf"/>
+                                    <segue destination="9QE-58-CyH" kind="show" identifier="" id="JPU-RN-pOf"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChoozeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cay-zj-0T8">
@@ -177,7 +178,7 @@
                     <connections>
                         <outlet property="faqButtonVerticalSpaceConstrain" destination="4ua-WF-h9v" id="jJS-Mg-MBf"/>
                         <outlet property="inviteButtonVerticalSpaceConstrain" destination="no2-9g-TOR" id="aob-an-f5j"/>
-                        <segue destination="jLn-Rn-Vg3" kind="show" identifier="name3" id="fX9-zu-BXb"/>
+                        <segue destination="jLn-Rn-Vg3" kind="show" identifier="LogIn" id="fX9-zu-BXb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
