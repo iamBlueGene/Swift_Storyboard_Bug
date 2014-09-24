@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dzN-Ad-eJ1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,237 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreenBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="yz9-FM-8RI">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63z-lQ-nJ8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <inset key="contentEdgeInsets" minX="6" minY="66" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Begin Test" backgroundImage="mainScreenBeginTestButtonImage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guj-yL-1e4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="2" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="invite" backgroundImage="mainScreenInviteFriendsButtonImage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="inviteButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BKw-Uk-bet"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-OA-gvR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="2" minY="30" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="FAQ" backgroundImage="mainScreenFAQButtonImage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9QE-58-CyH" kind="show" identifier="name2" id="JPU-RN-pOf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChoozeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cay-zj-0T8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Gv0-cp-MpR"/>
+                                    <constraint firstAttribute="height" constant="108" id="b0d-cx-1id"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gv0-cp-MpR"/>
+                                        <exclude reference="b0d-cx-1id"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Gv0-cp-MpR"/>
+                                        <include reference="b0d-cx-1id"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFL-sq-3JQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="m2J-Aj-I5X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="32" minY="6" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" backgroundImage="mainScreenGetUnlimitedTestsButtonImage">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Get Unlimited Tests">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="16" name="HelveticaNeue-Light"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="m2J-Aj-I5X"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="m2J-Aj-I5X"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DCH-OA-gvR" firstAttribute="top" secondItem="63z-lQ-nJ8" secondAttribute="bottom" constant="-18" id="4ua-WF-h9v"/>
+                            <constraint firstItem="nFL-sq-3JQ" firstAttribute="top" secondItem="yz9-FM-8RI" secondAttribute="bottom" constant="-98" id="UMw-Cg-c5S">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-63"/>
+                            </constraint>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UeS-Tx-mfr"/>
+                            <constraint firstItem="DCH-OA-gvR" firstAttribute="leading" secondItem="63z-lQ-nJ8" secondAttribute="trailing" constant="-47" id="VoB-jV-Jjh"/>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Vyo-WR-ycc"/>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="centerY" secondItem="63z-lQ-nJ8" secondAttribute="centerY" id="XmI-1P-S7r"/>
+                            <constraint firstAttribute="trailing" secondItem="yz9-FM-8RI" secondAttribute="trailing" id="Yb8-AH-xSy"/>
+                            <constraint firstItem="63z-lQ-nJ8" firstAttribute="leading" secondItem="guj-yL-1e4" secondAttribute="trailing" constant="-47" id="ay8-of-S1B"/>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="centerX" secondItem="cay-zj-0T8" secondAttribute="centerX" constant="-0.5" id="cBl-bt-jYt"/>
+                            <constraint firstItem="cay-zj-0T8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="29" id="cWG-nU-PAz">
+                                <variation key="heightClass=regular-widthClass=compact" constant="13"/>
+                            </constraint>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="centerX" secondItem="63z-lQ-nJ8" secondAttribute="centerX" id="fUw-EI-4nG"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yz9-FM-8RI" secondAttribute="bottom" id="inW-5j-o7W"/>
+                            <constraint firstItem="guj-yL-1e4" firstAttribute="top" secondItem="63z-lQ-nJ8" secondAttribute="bottom" constant="-18" id="no2-9g-TOR"/>
+                            <constraint firstItem="yz9-FM-8RI" firstAttribute="centerX" secondItem="nFL-sq-3JQ" secondAttribute="centerX" id="q3n-5c-oZp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yz9-FM-8RI"/>
+                                <exclude reference="63z-lQ-nJ8"/>
+                                <exclude reference="guj-yL-1e4"/>
+                                <exclude reference="DCH-OA-gvR"/>
+                                <exclude reference="cay-zj-0T8"/>
+                                <exclude reference="nFL-sq-3JQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="inW-5j-o7W"/>
+                                <exclude reference="ay8-of-S1B"/>
+                                <exclude reference="4ua-WF-h9v"/>
+                                <exclude reference="VoB-jV-Jjh"/>
+                                <exclude reference="no2-9g-TOR"/>
+                                <exclude reference="UMw-Cg-c5S"/>
+                                <exclude reference="cWG-nU-PAz"/>
+                                <exclude reference="UeS-Tx-mfr"/>
+                                <exclude reference="Vyo-WR-ycc"/>
+                                <exclude reference="XmI-1P-S7r"/>
+                                <exclude reference="Yb8-AH-xSy"/>
+                                <exclude reference="cBl-bt-jYt"/>
+                                <exclude reference="fUw-EI-4nG"/>
+                                <exclude reference="q3n-5c-oZp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yz9-FM-8RI"/>
+                                <include reference="63z-lQ-nJ8"/>
+                                <include reference="guj-yL-1e4"/>
+                                <include reference="DCH-OA-gvR"/>
+                                <include reference="cay-zj-0T8"/>
+                                <include reference="nFL-sq-3JQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="inW-5j-o7W"/>
+                                <include reference="ay8-of-S1B"/>
+                                <include reference="4ua-WF-h9v"/>
+                                <include reference="VoB-jV-Jjh"/>
+                                <include reference="no2-9g-TOR"/>
+                                <include reference="UMw-Cg-c5S"/>
+                                <include reference="cWG-nU-PAz"/>
+                                <include reference="UeS-Tx-mfr"/>
+                                <include reference="Vyo-WR-ycc"/>
+                                <include reference="XmI-1P-S7r"/>
+                                <include reference="Yb8-AH-xSy"/>
+                                <include reference="cBl-bt-jYt"/>
+                                <include reference="fUw-EI-4nG"/>
+                                <include reference="q3n-5c-oZp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="2rj-uX-JX0"/>
+                    <connections>
+                        <outlet property="faqButtonVerticalSpaceConstrain" destination="4ua-WF-h9v" id="jJS-Mg-MBf"/>
+                        <outlet property="inviteButtonVerticalSpaceConstrain" destination="no2-9g-TOR" id="aob-an-f5j"/>
+                        <segue destination="jLn-Rn-Vg3" kind="show" identifier="name3" id="fX9-zu-BXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1362" y="465"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K4l-ln-3HK">
+            <objects>
+                <viewController id="9QE-58-CyH" customClass="FAQViewController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CcP-Dt-Ggy"/>
+                        <viewControllerLayoutGuide type="bottom" id="6gy-BK-95k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qpn-jn-bfr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NaO-p5-bUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2382" y="1216.5"/>
+        </scene>
+        <!--Log In Or Register View Controller-->
+        <scene sceneID="u4p-UG-ajJ">
+            <objects>
+                <viewController id="jLn-Rn-Vg3" customClass="LogInOrRegisterViewController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wl3-fl-ixK"/>
+                        <viewControllerLayoutGuide type="bottom" id="rUq-98-Bcz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5z9-Vk-aR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vz1-C7-caB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0d-Yt-kpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2223" y="-9"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W0e-t4-FFI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzN-Ad-eJ1" customClass="EBNavigationController" customModule="Chooze" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qRC-6a-ldH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="puG-sY-Bbg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pjz-zl-zdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="393" y="465"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChoozeLogo" width="97" height="107"/>
+        <image name="mainScreenBackgroundImage" width="375" height="667"/>
+        <image name="mainScreenBeginTestButtonImage" width="228" height="228"/>
+        <image name="mainScreenFAQButtonImage" width="85" height="110"/>
+        <image name="mainScreenGetUnlimitedTestsButtonImage" width="283" height="58"/>
+        <image name="mainScreenInviteFriendsButtonImage" width="85" height="110"/>
+    </resources>
 </document>
