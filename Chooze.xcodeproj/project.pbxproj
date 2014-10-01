@@ -43,6 +43,7 @@
 		456D7FA519D5AA17004656A8 /* EBIntroPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456D7FA419D5AA17004656A8 /* EBIntroPage.xib */; };
 		4590DF6719D35DAB00D6EB43 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590DF6619D35DAB00D6EB43 /* MainViewController.swift */; };
 		4590E11E19D42FD300D6EB43 /* EBFacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590E11D19D42FD300D6EB43 /* EBFacebookService.swift */; };
+		45B980AA19DC20D400CB4258 /* EBLandscapeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B980A919DC20D400CB4258 /* EBLandscapeNavigationController.swift */; };
 		45BF7B2119D4439E00061D1A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2019D4439E00061D1A /* CoreMotion.framework */; };
 		45BF7B2519D443DD00061D1A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2419D443DD00061D1A /* AdSupport.framework */; };
 		45BF7B2819D4477C00061D1A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2619D4477C00061D1A /* Bolts.framework */; };
@@ -108,6 +109,7 @@
 		456D7FA419D5AA17004656A8 /* EBIntroPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBIntroPage.xib; sourceTree = "<group>"; };
 		4590DF6619D35DAB00D6EB43 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4590E11D19D42FD300D6EB43 /* EBFacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBFacebookService.swift; sourceTree = "<group>"; };
+		45B980A919DC20D400CB4258 /* EBLandscapeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBLandscapeNavigationController.swift; sourceTree = "<group>"; };
 		45BF7B2019D4439E00061D1A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		45BF7B2419D443DD00061D1A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		45BF7B2619D4477C00061D1A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../FacebookSDK1/Bolts.framework; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		456070CF19D59F8000BF8686 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				45089A3419DB608800C628F9 /* EBTestNamesDataHandler.swift */,
 				456070D019D59FA700BF8686 /* ChoozeUtils.swift */,
 			);
 			name = Common;
@@ -337,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				456CF14E19D175EB002C9274 /* EBNavigationController.swift */,
+				45B980A919DC20D400CB4258 /* EBLandscapeNavigationController.swift */,
 			);
 			name = NavigationController;
 			sourceTree = "<group>";
@@ -402,7 +406,6 @@
 				45E043C819D8013500968A60 /* EBTagListView.xib */,
 				45E043C619D7F18800968A60 /* EBTagView.swift */,
 				45090B3119DB2E4200308778 /* EBTagListStatus.swift */,
-				45089A3419DB608800C628F9 /* EBTestNamesDataHandler.swift */,
 			);
 			name = EBTagList;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B980AA19DC20D400CB4258 /* EBLandscapeNavigationController.swift in Sources */,
 				4527429B19D7182B009C58DD /* SignInWithEmailViewController.swift in Sources */,
 				45089A3519DB608800C628F9 /* EBTestNamesDataHandler.swift in Sources */,
 				45E043C719D7F18800968A60 /* EBTagView.swift in Sources */,

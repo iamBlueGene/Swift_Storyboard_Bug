@@ -71,18 +71,23 @@ class EBTestNamesDataHandler: NSObject {
     }
     
     func canStartTest() -> Bool {
-        if unavilableNames.count >= 2 && currentNames.count == unavilableNames.count {
-            return true
+        if unavilableNames.count < 2 || currentNames.count != unavilableNames.count {
+            let alertView = UIAlertView(title: "Error", message: "Please add the same amount of undesired names as desired names", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
         }
-        return false
+        return true
     }
     
     func canGoToStepTwo() -> Bool {
         if currentNames.count >= 2 {
             return true
         }
+        else {
+            let alertView = UIAlertView(title: "Error", message: "Please add at least two names", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+        }
         return false
     }
 
-   
 }
