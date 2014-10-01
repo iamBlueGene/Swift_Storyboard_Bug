@@ -21,34 +21,27 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        isIphone4Model()
-        let didRun = EBUserDefaults.sharedInstance.didRunApp()
-        if didRun {
-            // TODO: show intro view
-        }
-        
-        if PFUser.currentUser() == nil {
-            shouldAllowBackButton = false
-            performSegueWithIdentifier("LogIn", sender: nil)
-        }
-        
-        
+ 
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.hidden = true
+
         
+        if PFUser.currentUser() == nil {
+            shouldAllowBackButton = false
+            performSegueWithIdentifier("LogIn", sender: nil)
+            return
+        }
+        
+        isIphone4Model()
         
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBar.hidden = false
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,17 +51,16 @@ class MainViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "LogIn" && !shouldAllowBackButton {
-            let viewController = segue.destinationViewController as LogInOrRegisterViewController
-            viewController.shouldHideBackButton = false
+            segue.destinationViewController.navigationItem.hidesBackButton = true
+            
         }
-        
     }
     
     // MARK: - IBActions
     
     @IBAction func inviteButtonPressed(sender: AnyObject) {
         if let currentUser = PFUser.currentUser() {
-            
+            EBFacebookService.sharedInstance.inviteFacebookFriends()
         }
         else {
             performSegueWithIdentifier("LogIn", sender: self)
@@ -76,12 +68,14 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - Helper Methods
+    
     func isIphone4Model() {
         if k_isSmallScreen {
             self.faqButtonVerticalSpaceConstrain.constant -= k_smallScreenSizeConstant
             self.inviteButtonVerticalSpaceConstrain.constant -= k_smallScreenSizeConstant
         }
     }
+    
 
 
 }

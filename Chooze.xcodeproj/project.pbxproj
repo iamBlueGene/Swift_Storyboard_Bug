@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45089A3519DB608800C628F9 /* EBTestNamesDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45089A3419DB608800C628F9 /* EBTestNamesDataHandler.swift */; };
+		45089A3719DBA13C00C628F9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45089A3619DBA13C00C628F9 /* TestViewController.swift */; };
+		45090B3219DB2E4200308778 /* EBTagListStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45090B3119DB2E4200308778 /* EBTagListStatus.swift */; };
+		450F352819D71FDE007DC09F /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450F352719D71FDE007DC09F /* ResetPasswordViewController.swift */; };
 		451733E619D18CBF008F8307 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733E319D18CBF008F8307 /* Bolts.framework */; };
 		451733E719D18CBF008F8307 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733E419D18CBF008F8307 /* Parse.framework */; };
 		451733E819D18CBF008F8307 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733E519D18CBF008F8307 /* ParseFacebookUtils.framework */; };
@@ -20,6 +24,7 @@
 		451733F819D18D21008F8307 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733F719D18D21008F8307 /* Security.framework */; };
 		451733FA19D18D29008F8307 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733F919D18D29008F8307 /* StoreKit.framework */; };
 		451733FC19D18D31008F8307 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451733FB19D18D31008F8307 /* SystemConfiguration.framework */; };
+		4527429B19D7182B009C58DD /* SignInWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527429A19D7182B009C58DD /* SignInWithEmailViewController.swift */; };
 		452A126619D03B6500E1E217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A126519D03B6500E1E217 /* AppDelegate.swift */; };
 		452A126B19D03B6500E1E217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452A126919D03B6500E1E217 /* Main.storyboard */; };
 		452A126D19D03B6500E1E217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 452A126C19D03B6500E1E217 /* Images.xcassets */; };
@@ -27,9 +32,28 @@
 		452A127C19D03B6500E1E217 /* ChoozeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452A127B19D03B6500E1E217 /* ChoozeTests.swift */; };
 		453BE11619D1AF7000D7D3A1 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BE11519D1AF7000D7D3A1 /* FAQViewController.swift */; };
 		453BE11819D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453BE11719D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift */; };
+		453DA14619DAA96B0056FB87 /* ChoozeNamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453DA14519DAA96B0056FB87 /* ChoozeNamesViewController.swift */; };
+		456070C219D57FCE00BF8686 /* EBParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456070C119D57FCE00BF8686 /* EBParseService.swift */; };
+		456070C719D5919300BF8686 /* EBIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456070C619D5919300BF8686 /* EBIntroView.swift */; };
+		456070CD19D59A1C00BF8686 /* enIntroPagesInfo.cif in Resources */ = {isa = PBXBuildFile; fileRef = 456070CB19D59A1C00BF8686 /* enIntroPagesInfo.cif */; };
+		456070D119D59FA700BF8686 /* ChoozeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456070D019D59FA700BF8686 /* ChoozeUtils.swift */; };
 		456CF14F19D175EB002C9274 /* EBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CF14E19D175EB002C9274 /* EBNavigationController.swift */; };
 		456CF15219D1797B002C9274 /* EBUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456CF15119D1797B002C9274 /* EBUserDefaults.swift */; };
+		456D7FA219D5AA00004656A8 /* EBIntroPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456D7FA119D5AA00004656A8 /* EBIntroPage.swift */; };
+		456D7FA519D5AA17004656A8 /* EBIntroPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456D7FA419D5AA17004656A8 /* EBIntroPage.xib */; };
 		4590DF6719D35DAB00D6EB43 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590DF6619D35DAB00D6EB43 /* MainViewController.swift */; };
+		4590E11E19D42FD300D6EB43 /* EBFacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590E11D19D42FD300D6EB43 /* EBFacebookService.swift */; };
+		45BF7B2119D4439E00061D1A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2019D4439E00061D1A /* CoreMotion.framework */; };
+		45BF7B2519D443DD00061D1A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2419D443DD00061D1A /* AdSupport.framework */; };
+		45BF7B2819D4477C00061D1A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2619D4477C00061D1A /* Bolts.framework */; };
+		45BF7B2919D4477C00061D1A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45BF7B2719D4477C00061D1A /* FacebookSDK.framework */; };
+		45CBB7B419D71486001B59FF /* SignUpWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CBB7B319D71486001B59FF /* SignUpWithEmailViewController.swift */; };
+		45E043B919D7848800968A60 /* EBFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E043B819D7848800968A60 /* EBFileReader.swift */; };
+		45E043BD19D785AD00968A60 /* enQuestionsInfo.cif in Resources */ = {isa = PBXBuildFile; fileRef = 45E043BB19D785AD00968A60 /* enQuestionsInfo.cif */; };
+		45E043C119D786FD00968A60 /* enAnswersInfo.cif in Resources */ = {isa = PBXBuildFile; fileRef = 45E043BF19D786FC00968A60 /* enAnswersInfo.cif */; };
+		45E043C519D7F0D600968A60 /* EBTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E043C419D7F0D600968A60 /* EBTagListView.swift */; };
+		45E043C719D7F18800968A60 /* EBTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E043C619D7F18800968A60 /* EBTagView.swift */; };
+		45E043C919D8013500968A60 /* EBTagListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45E043C819D8013500968A60 /* EBTagListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45089A3419DB608800C628F9 /* EBTestNamesDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBTestNamesDataHandler.swift; sourceTree = "<group>"; };
+		45089A3619DBA13C00C628F9 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		45090B3119DB2E4200308778 /* EBTagListStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBTagListStatus.swift; sourceTree = "<group>"; };
+		450F352719D71FDE007DC09F /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		451733E319D18CBF008F8307 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		451733E419D18CBF008F8307 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		451733E519D18CBF008F8307 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -57,6 +85,7 @@
 		451733F919D18D29008F8307 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		451733FB19D18D31008F8307 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		451733FF19D18EC8008F8307 /* Chooze-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chooze-Bridging-Header.h"; sourceTree = "<group>"; };
+		4527429A19D7182B009C58DD /* SignInWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewController.swift; sourceTree = "<group>"; };
 		452A126019D03B6500E1E217 /* Chooze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chooze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		452A126419D03B6500E1E217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452A126519D03B6500E1E217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,9 +97,28 @@
 		452A127B19D03B6500E1E217 /* ChoozeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoozeTests.swift; sourceTree = "<group>"; };
 		453BE11519D1AF7000D7D3A1 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		453BE11719D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInOrRegisterViewController.swift; sourceTree = "<group>"; };
+		453DA14519DAA96B0056FB87 /* ChoozeNamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoozeNamesViewController.swift; sourceTree = "<group>"; };
+		456070C119D57FCE00BF8686 /* EBParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBParseService.swift; sourceTree = "<group>"; };
+		456070C619D5919300BF8686 /* EBIntroView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBIntroView.swift; sourceTree = "<group>"; };
+		456070CB19D59A1C00BF8686 /* enIntroPagesInfo.cif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enIntroPagesInfo.cif; sourceTree = "<group>"; };
+		456070D019D59FA700BF8686 /* ChoozeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoozeUtils.swift; sourceTree = "<group>"; };
 		456CF14E19D175EB002C9274 /* EBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBNavigationController.swift; sourceTree = "<group>"; };
 		456CF15119D1797B002C9274 /* EBUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBUserDefaults.swift; sourceTree = "<group>"; };
+		456D7FA119D5AA00004656A8 /* EBIntroPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBIntroPage.swift; sourceTree = "<group>"; };
+		456D7FA419D5AA17004656A8 /* EBIntroPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBIntroPage.xib; sourceTree = "<group>"; };
 		4590DF6619D35DAB00D6EB43 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4590E11D19D42FD300D6EB43 /* EBFacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBFacebookService.swift; sourceTree = "<group>"; };
+		45BF7B2019D4439E00061D1A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		45BF7B2419D443DD00061D1A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		45BF7B2619D4477C00061D1A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = ../../../FacebookSDK1/Bolts.framework; sourceTree = "<group>"; };
+		45BF7B2719D4477C00061D1A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../FacebookSDK1/FacebookSDK.framework; sourceTree = "<group>"; };
+		45CBB7B319D71486001B59FF /* SignUpWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailViewController.swift; sourceTree = "<group>"; };
+		45E043B819D7848800968A60 /* EBFileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBFileReader.swift; sourceTree = "<group>"; };
+		45E043BB19D785AD00968A60 /* enQuestionsInfo.cif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enQuestionsInfo.cif; sourceTree = "<group>"; };
+		45E043BF19D786FC00968A60 /* enAnswersInfo.cif */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = enAnswersInfo.cif; sourceTree = "<group>"; };
+		45E043C419D7F0D600968A60 /* EBTagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBTagListView.swift; sourceTree = "<group>"; };
+		45E043C619D7F18800968A60 /* EBTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EBTagView.swift; sourceTree = "<group>"; };
+		45E043C819D8013500968A60 /* EBTagListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EBTagListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +126,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BF7B2519D443DD00061D1A /* AdSupport.framework in Frameworks */,
+				45BF7B2119D4439E00061D1A /* CoreMotion.framework in Frameworks */,
 				451733FC19D18D31008F8307 /* SystemConfiguration.framework in Frameworks */,
 				451733FA19D18D29008F8307 /* StoreKit.framework in Frameworks */,
 				451733F819D18D21008F8307 /* Security.framework in Frameworks */,
 				451733F619D18D1A008F8307 /* QuartzCore.framework in Frameworks */,
 				451733F419D18D13008F8307 /* MobileCoreServices.framework in Frameworks */,
 				451733F219D18D08008F8307 /* libz.dylib in Frameworks */,
+				45BF7B2919D4477C00061D1A /* FacebookSDK.framework in Frameworks */,
 				451733F019D18D00008F8307 /* CoreLocation.framework in Frameworks */,
 				451733EE19D18CF8008F8307 /* CoreGraphics.framework in Frameworks */,
 				451733EC19D18CF2008F8307 /* CFNetwork.framework in Frameworks */,
@@ -91,6 +142,7 @@
 				451733E719D18CBF008F8307 /* Parse.framework in Frameworks */,
 				451733E619D18CBF008F8307 /* Bolts.framework in Frameworks */,
 				451733E819D18CBF008F8307 /* ParseFacebookUtils.framework in Frameworks */,
+				45BF7B2819D4477C00061D1A /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +170,10 @@
 		451733FD19D18D3D008F8307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45BF7B2619D4477C00061D1A /* Bolts.framework */,
+				45BF7B2719D4477C00061D1A /* FacebookSDK.framework */,
+				45BF7B2419D443DD00061D1A /* AdSupport.framework */,
+				45BF7B2019D4439E00061D1A /* CoreMotion.framework */,
 				451733E219D18CBF008F8307 /* parse-library */,
 				451733FB19D18D31008F8307 /* SystemConfiguration.framework */,
 				451733F919D18D29008F8307 /* StoreKit.framework */,
@@ -136,7 +192,7 @@
 		451733FE19D18E9B008F8307 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				451733FF19D18EC8008F8307 /* Chooze-Bridging-Header.h */,
+				456070C119D57FCE00BF8686 /* EBParseService.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -166,7 +222,10 @@
 				452A126919D03B6500E1E217 /* Main.storyboard */,
 				456CF14A19D1682B002C9274 /* NavigationController */,
 				456CF14B19D168B1002C9274 /* View Controllers */,
+				456070C419D58B5000BF8686 /* Custom Views */,
 				456CF15019D17945002C9274 /* Helpers */,
+				456070CF19D59F8000BF8686 /* Common */,
+				451733FF19D18EC8008F8307 /* Chooze-Bridging-Header.h */,
 				452A126C19D03B6500E1E217 /* Images.xcassets */,
 				452A126E19D03B6500E1E217 /* LaunchScreen.xib */,
 				452A126319D03B6500E1E217 /* Supporting Files */,
@@ -177,6 +236,7 @@
 		452A126319D03B6500E1E217 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				456070C819D5999400BF8686 /* Text */,
 				451733FD19D18D3D008F8307 /* Frameworks */,
 				452A126419D03B6500E1E217 /* Info.plist */,
 			);
@@ -200,6 +260,79 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		453DA14419DAA94B0056FB87 /* Login / Register */ = {
+			isa = PBXGroup;
+			children = (
+				453BE11719D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift */,
+				45CBB7B319D71486001B59FF /* SignUpWithEmailViewController.swift */,
+				4527429A19D7182B009C58DD /* SignInWithEmailViewController.swift */,
+				450F352719D71FDE007DC09F /* ResetPasswordViewController.swift */,
+			);
+			name = "Login / Register";
+			sourceTree = "<group>";
+		};
+		456070C319D58B1C00BF8686 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				456CF15119D1797B002C9274 /* EBUserDefaults.swift */,
+			);
+			name = UserDefaults;
+			sourceTree = "<group>";
+		};
+		456070C419D58B5000BF8686 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				45E043C319D7F0B700968A60 /* EBTagList */,
+				456070C519D5917800BF8686 /* EBIntroView */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		456070C519D5917800BF8686 /* EBIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				456D7FA319D5AA04004656A8 /* EBIntroPage */,
+				456070C619D5919300BF8686 /* EBIntroView.swift */,
+			);
+			name = EBIntroView;
+			sourceTree = "<group>";
+		};
+		456070C819D5999400BF8686 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				45E043BA19D7859400968A60 /* Questions\Answers */,
+				456070CA19D59A0700BF8686 /* Intro */,
+			);
+			name = Text;
+			sourceTree = "<group>";
+		};
+		456070CA19D59A0700BF8686 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				456070CB19D59A1C00BF8686 /* enIntroPagesInfo.cif */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
+		456070CF19D59F8000BF8686 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				456070D019D59FA700BF8686 /* ChoozeUtils.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		456CAFDE19D575EB0045C2BB /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+				45E043B719D7846F00968A60 /* File Reader */,
+				456070C319D58B1C00BF8686 /* UserDefaults */,
+				451733FE19D18E9B008F8307 /* Parse */,
+				4590E11A19D42F7400D6EB43 /* Facebook */,
+			);
+			name = "Data Access Layer";
+			sourceTree = "<group>";
+		};
 		456CF14A19D1682B002C9274 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,9 +344,11 @@
 		456CF14B19D168B1002C9274 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				453BE11519D1AF7000D7D3A1 /* FAQViewController.swift */,
-				453BE11719D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift */,
 				4590DF6619D35DAB00D6EB43 /* MainViewController.swift */,
+				453BE11519D1AF7000D7D3A1 /* FAQViewController.swift */,
+				453DA14519DAA96B0056FB87 /* ChoozeNamesViewController.swift */,
+				45089A3619DBA13C00C628F9 /* TestViewController.swift */,
+				453DA14419DAA94B0056FB87 /* Login / Register */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -221,10 +356,55 @@
 		456CF15019D17945002C9274 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				451733FE19D18E9B008F8307 /* Parse */,
-				456CF15119D1797B002C9274 /* EBUserDefaults.swift */,
+				456CAFDE19D575EB0045C2BB /* Data Access Layer */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		456D7FA319D5AA04004656A8 /* EBIntroPage */ = {
+			isa = PBXGroup;
+			children = (
+				456D7FA119D5AA00004656A8 /* EBIntroPage.swift */,
+				456D7FA419D5AA17004656A8 /* EBIntroPage.xib */,
+			);
+			name = EBIntroPage;
+			sourceTree = "<group>";
+		};
+		4590E11A19D42F7400D6EB43 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				4590E11D19D42FD300D6EB43 /* EBFacebookService.swift */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
+		45E043B719D7846F00968A60 /* File Reader */ = {
+			isa = PBXGroup;
+			children = (
+				45E043B819D7848800968A60 /* EBFileReader.swift */,
+			);
+			name = "File Reader";
+			sourceTree = "<group>";
+		};
+		45E043BA19D7859400968A60 /* Questions\Answers */ = {
+			isa = PBXGroup;
+			children = (
+				45E043BB19D785AD00968A60 /* enQuestionsInfo.cif */,
+				45E043BF19D786FC00968A60 /* enAnswersInfo.cif */,
+			);
+			name = "Questions\\Answers";
+			sourceTree = "<group>";
+		};
+		45E043C319D7F0B700968A60 /* EBTagList */ = {
+			isa = PBXGroup;
+			children = (
+				45E043C419D7F0D600968A60 /* EBTagListView.swift */,
+				45E043C819D8013500968A60 /* EBTagListView.xib */,
+				45E043C619D7F18800968A60 /* EBTagView.swift */,
+				45090B3119DB2E4200308778 /* EBTagListStatus.swift */,
+				45089A3419DB608800C628F9 /* EBTestNamesDataHandler.swift */,
+			);
+			name = EBTagList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +471,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 452A125719D03B6500E1E217;
 			productRefGroup = 452A126119D03B6500E1E217 /* Products */;
@@ -309,8 +490,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				452A126B19D03B6500E1E217 /* Main.storyboard in Resources */,
+				456070CD19D59A1C00BF8686 /* enIntroPagesInfo.cif in Resources */,
 				452A127019D03B6500E1E217 /* LaunchScreen.xib in Resources */,
+				45E043BD19D785AD00968A60 /* enQuestionsInfo.cif in Resources */,
+				45E043C919D8013500968A60 /* EBTagListView.xib in Resources */,
+				45E043C119D786FD00968A60 /* enAnswersInfo.cif in Resources */,
 				452A126D19D03B6500E1E217 /* Images.xcassets in Resources */,
+				456D7FA519D5AA17004656A8 /* EBIntroPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,12 +514,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4527429B19D7182B009C58DD /* SignInWithEmailViewController.swift in Sources */,
+				45089A3519DB608800C628F9 /* EBTestNamesDataHandler.swift in Sources */,
+				45E043C719D7F18800968A60 /* EBTagView.swift in Sources */,
+				453DA14619DAA96B0056FB87 /* ChoozeNamesViewController.swift in Sources */,
+				45090B3219DB2E4200308778 /* EBTagListStatus.swift in Sources */,
 				4590DF6719D35DAB00D6EB43 /* MainViewController.swift in Sources */,
 				456CF15219D1797B002C9274 /* EBUserDefaults.swift in Sources */,
+				45089A3719DBA13C00C628F9 /* TestViewController.swift in Sources */,
+				456070C219D57FCE00BF8686 /* EBParseService.swift in Sources */,
+				45E043B919D7848800968A60 /* EBFileReader.swift in Sources */,
 				456CF14F19D175EB002C9274 /* EBNavigationController.swift in Sources */,
+				456D7FA219D5AA00004656A8 /* EBIntroPage.swift in Sources */,
 				453BE11619D1AF7000D7D3A1 /* FAQViewController.swift in Sources */,
+				45E043C519D7F0D600968A60 /* EBTagListView.swift in Sources */,
 				453BE11819D1AFA500D7D3A1 /* LogInOrRegisterViewController.swift in Sources */,
+				4590E11E19D42FD300D6EB43 /* EBFacebookService.swift in Sources */,
+				456070D119D59FA700BF8686 /* ChoozeUtils.swift in Sources */,
+				456070C719D5919300BF8686 /* EBIntroView.swift in Sources */,
 				452A126619D03B6500E1E217 /* AppDelegate.swift in Sources */,
+				45CBB7B419D71486001B59FF /* SignUpWithEmailViewController.swift in Sources */,
+				450F352819D71FDE007DC09F /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,10 +663,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chooze/parse-library-1",
+					/Users/Eli/Documents/FacebookSDK,
+					/Users/Eli/Documents/FacebookSDK/FBAudienceNetwork,
+					/Users/Eli/Documents/FacebookSDK1,
 				);
 				INFOPLIST_FILE = Chooze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chooze/Chooze-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -482,10 +687,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chooze/parse-library-1",
+					/Users/Eli/Documents/FacebookSDK,
+					/Users/Eli/Documents/FacebookSDK/FBAudienceNetwork,
+					/Users/Eli/Documents/FacebookSDK1,
 				);
 				INFOPLIST_FILE = Chooze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Chooze/Chooze-Bridging-Header.h";
 			};

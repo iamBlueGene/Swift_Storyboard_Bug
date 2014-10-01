@@ -1,0 +1,73 @@
+//
+//  EBTestNamesDataHandler.swift
+//  Chooze
+//
+//  Created by Eliyahu Braginskiy on 10/1/14.
+//  Copyright (c) 2014 BlueGene. All rights reserved.
+//
+
+import UIKit
+
+private var _myDataHandeling = EBTestNamesDataHandler()
+
+
+class EBTestNamesDataHandler: NSObject {
+    
+    private var unavilableNames = Array<String>()
+    private var currentNames = Array<String>()
+    
+    class var shardInstance : EBTestNamesDataHandler {
+    return _myDataHandeling
+    }
+    
+    func setUnavilableNames(names :Array<String>) {
+        self.unavilableNames = names
+    }
+    
+    func setCurrentNames(names: Array<String>) {
+        self.currentNames = names
+    }
+    
+    func getCurrentNames() -> Array<String> {
+        return currentNames
+    }
+    
+    func canAddName(name :String) -> Bool {
+        if name.isEmpty {
+            let alertView = UIAlertView(title: "Error", message: "Can't add an empty name", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
+            
+        }
+        else if contains(currentNames, name) {
+            let alertView = UIAlertView(title: "Error", message: "You can't add the same name twice", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
+        }
+        else if contains(unavilableNames, name) {
+            let alertView = UIAlertView(title: "Error", message: "You cant add the same names in desired and undesired names", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
+        }
+        else {
+            return true
+        }
+        
+    }
+    
+    func canStartTest() -> Bool {
+        if unavilableNames.count >= 2 && currentNames.count == unavilableNames.count {
+            return true
+        }
+        return false
+    }
+    
+    func canGoToStepTwo() -> Bool {
+        if currentNames.count >= 2 {
+            return true
+        }
+        return false
+    }
+
+   
+}

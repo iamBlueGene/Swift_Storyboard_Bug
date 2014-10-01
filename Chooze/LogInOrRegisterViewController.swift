@@ -10,18 +10,12 @@ import UIKit
 
 class LogInOrRegisterViewController: UIViewController {
     
-    var shouldHideBackButton = true
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       // performSegueWithIdentifier("test", sender: nil)
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-       // self.navigationController?.navigationBar.hidden = false
-       // navigationItem.hidesBackButton = shouldHideBackButton
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,15 +23,26 @@ class LogInOrRegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signInWithFacebookButtonPressed(sender: AnyObject) {
+        EBFacebookService.sharedInstance.signInWithFacebook { (success,error) -> () in
+            if success {
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
+            else {
+                if error != nil {
+                    ChoozeUtils.showError(error!)
+                }
+            }
+        }
     }
-    */
+    
+    @IBAction func watchIntroButtonPressed(sender: AnyObject) {
+        var introView:EBIntroView? = EBIntroView()
+        introView!.show({() ->() in
+            introView = nil
+            }
+        )
 
+    }
+    
 }
