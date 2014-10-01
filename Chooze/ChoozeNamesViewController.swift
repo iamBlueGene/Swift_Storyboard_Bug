@@ -10,6 +10,8 @@ import UIKit
 
 class ChoozeNamesViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var desiredNamesDescription: UILabel!
     @IBOutlet weak var undesiredNamesDescription: UILabel!
     @IBOutlet weak var step1Label: UILabel!
@@ -18,12 +20,17 @@ class ChoozeNamesViewController: UIViewController {
     @IBOutlet weak var continueView: UIView!
     @IBOutlet weak var deleteView: UIView!
     @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var continueViewVerticalSpaceConstraint: NSLayoutConstraint!
     
+    //  MARK: - Variables
     
     private var unavilableNames:Array<String>?
     private var stepNumber = 1
     private var onceToken : dispatch_once_t = 0
     private var tagListViewStatus = EBTagListStatus.Normal
+    private var isKeyboardUp = false
+    
+    // MARK: - View Controller Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +46,15 @@ class ChoozeNamesViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        registerForKeyboardNotifications()
+        
+        self.tagListView.updateNamesToHandler()
         if stepNumber == 2 {
             makeStep2()
+        }
+        else if stepNumber == 1
+        {
+            makeStep1()
         }
     }
     
@@ -69,7 +83,7 @@ class ChoozeNamesViewController: UIViewController {
     @IBAction func continueButtonPressed(sender: AnyObject) {
         if stepNumber == 2 {
             if EBTestNamesDataHandler.shardInstance.canStartTest() {
-                // start test 
+                self.performSegueWithIdentifier("BeginTest", sender: self)
             }
         }
         else {
@@ -106,6 +120,10 @@ class ChoozeNamesViewController: UIViewController {
         EBTestNamesDataHandler.shardInstance.setUnavilableNames(self.unavilableNames!)
     }
     
+    private func makeStep1() {
+        EBTestNamesDataHandler.shardInstance.setUnavilableNames(Array<String>())
+    }
+    
     private func setTagListViewStatusEditing() {
         //self.editButton.setTitle("Done", forState: UIControlState.Normal)
         self.editButton.title = "Done"
@@ -125,14 +143,36 @@ class ChoozeNamesViewController: UIViewController {
             self.continueView.alpha = 1.0;
         })
     }
-    /*
-    // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    // MARK: - Keyboard Notifications
+    
+    private func registerForKeyboardNotifications() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChange:", name: UIKeyboardWillChangeFrameNotification, object: nil)
     }
-    */
+    
+    func keyboardWillShow(notification : NSNotification) {
+        isKeyboardUp = true
+    }
+    
+    func keyboardWillHide(notification : NSNotification) {
+        isKeyboardUp = false
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.continueViewVerticalSpaceConstraint.constant = 0
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func keyboardWillChange(notification : NSNotification) {
+        if let keyboardInfo = notification.userInfo {
+            if let keyboardFrameBegin: AnyObject = keyboardInfo[UIKeyboardFrameEndUserInfoKey] {
+                let keyboardFrameBeginRect = keyboardFrameBegin.CGRectValue()
+                self.continueViewVerticalSpaceConstraint.constant = keyboardFrameBeginRect.size.height - 64 ;
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+    }
     
 }

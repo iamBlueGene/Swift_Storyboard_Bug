@@ -44,14 +44,7 @@ class EBTagListView: UIView, EBTagViewDelegate {
     
     @IBAction func addNameButtonPressed(sender: AnyObject) {
         if (status != EBTagListStatus.AddingName) {
-            if (self.nameViews.count > 3) {
-                let alertView = UIAlertView(title: "Error", message: "You can't add more than four names", delegate: nil, cancelButtonTitle: "OK")
-                alertView.show()
-                return;
-            }
-            else if (self.unavilableNames.count != 0 && (self.unavilableNames.count <= self.nameViews.count)) {
-                let alertView = UIAlertView(title: "Error", message: "You can't add more undesired names than the amount of desired names", delegate: nil, cancelButtonTitle: "OK")
-                alertView.show()
+            if (EBTestNamesDataHandler.shardInstance.checkIfCanAddAnotherName() == false) {
                 return;
             }
             status = EBTagListStatus.AddingName;
@@ -122,7 +115,6 @@ class EBTagListView: UIView, EBTagViewDelegate {
     
     func startWritingNames() {
         self.addNameButtonPressed(self)
-        status = EBTagListStatus.AddingName
     }
     
     private func getNames() -> Array<String> {
@@ -131,6 +123,10 @@ class EBTagListView: UIView, EBTagViewDelegate {
             names.append(tagView.getName())
         }
         return names
+    }
+    
+    func updateNamesToHandler() {
+        EBTestNamesDataHandler.shardInstance.setCurrentNames(getNames())
     }
     
     func setStatus(newStatus: Int) {

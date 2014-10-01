@@ -49,10 +49,25 @@ class EBTestNamesDataHandler: NSObject {
             alertView.show()
             return false
         }
+            
         else {
             return true
         }
         
+    }
+    
+    func checkIfCanAddAnotherName() -> Bool {
+        if (self.unavilableNames.count != 0) && (self.unavilableNames.count <= self.currentNames.count) {
+            let alertView = UIAlertView(title: "Error", message: "You can't add more undesired names than the amount of desired names", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
+        }
+        else if (self.currentNames.count > 3) {
+            let alertView = UIAlertView(title: "Error", message: "You can't add more than four names", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            return false
+        }
+        return true
     }
     
     func canStartTest() -> Bool {
