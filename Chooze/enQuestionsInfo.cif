@@ -1,7 +1,0 @@
-What is chooze?
-How does it work?
-Who we are.
-Why do I need to enter names I dislike/hate?
-Does it work every single time?
-Why do more tests cost money?
-I took the test twice with different results

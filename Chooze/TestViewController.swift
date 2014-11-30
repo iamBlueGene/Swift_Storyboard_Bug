@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc(TestViewController) class TestViewController: UIViewController, EBTestDataDelegate, EBTestMenuViewDeleagte, EBInstructionsDelegate, EBBlockDelegate{
+ class TestViewController: UIViewController {
     
     var desiredNams = Array<String>()
     var undesiredNames = Array<String>()
@@ -20,7 +20,6 @@ import UIKit
     var didFinishLoadingData = false
     private var startTestTimer:NSTimer?
     var prevViewController:UIViewController?
-    var waitingIndicator:EBWaitingIndicator?
     var timer:NSTimer?
     
     @IBOutlet weak var leftLabel1: UILabel!
@@ -57,12 +56,7 @@ import UIKit
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if ChoozeUtils.sharedInstance.shouldGoToMenu {
-            navigationController?.popToRootViewControllerAnimated(false)
-            self.dismissViewControllerAnimated(false, completion: { () -> Void in
-            })
-            ChoozeUtils.sharedInstance.shouldGoToMenu = false
-        }
+       
         
         didFinishLoadingData = false
         
@@ -83,10 +77,7 @@ import UIKit
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillResignActiveNotification", name: UIApplicationWillResignActiveNotification, object: nil)
         
-        EBTestData.sharedInstance.resetData()
-        EBTestData.sharedInstance.initData(self.desiredNams, undesiredNames: self.undesiredNames, delegate: self)
-        
-    }
+           }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -109,10 +100,7 @@ import UIKit
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Show Results2" {
-            var viewController = segue.destinationViewController as ResultsViewController
-            viewController.prevViewController = self.prevViewController!
-        }
+       
     }
     
     
@@ -122,14 +110,7 @@ import UIKit
             if timer != nil {
                 timer!.invalidate()
             }
-            waitingIndicator = EBWaitingIndicator(frame: self.view.frame)
-            self.view.addSubview(waitingIndicator!)
-            self.view.bringSubviewToFront(waitingIndicator!)
-            
-            
-            var ebins = EBInstructions(frame: self.view.frame, delegate: self)
-            self.view.addSubview(ebins)
-            self.view.bringSubviewToFront(ebins)
+           
         }
     }
     
@@ -148,7 +129,6 @@ import UIKit
         })
         
         setLabelsAlpha(currentBlock)
-        EBTestData.sharedInstance.getNext()
         
         
     }
@@ -156,34 +136,12 @@ import UIKit
     //IBActions
     
     @IBAction func menuButtonPressed(sender: AnyObject) {
-        var elapsedTime:CFTimeInterval = 0.0
-        if self.startTime != nil {
-            elapsedTime = CACurrentMediaTime() - self.startTime!;
-        }
-        totalTimeSoFar = elapsedTime
-        var menuView = EBTestMenuView(delegate: self, frame: self.view.frame)
-        menuView.center = CGPointMake(self.view.center.x, self.view.center.y + 20)
-        self.view.addSubview(menuView)
-        self.view.bringSubviewToFront(menuView)
+
     }
     
     @IBAction func leftOrRightButtonPressed(sender: AnyObject) {
         
-        self.leftPartButton.userInteractionEnabled = false
-        self.rightPartButton.userInteractionEnabled = false
-        
-        var elapsedTime:CFTimeInterval = 0.0
-        if self.startTime != nil {
-            elapsedTime = CACurrentMediaTime() - self.startTime!;
-            elapsedTime += totalTimeSoFar
         }
-        if sender as NSObject == leftPartButton {
-            EBTestData.sharedInstance.checkCurrent([self.leftLabel1.text!, self.leftLabel2.text!], responseTime: elapsedTime)
-        }
-        else if sender as NSObject == rightPartButton {
-            EBTestData.sharedInstance.checkCurrent([self.rightLabel1.text!, self.rightLabel2.text!], responseTime: elapsedTime)
-        }
-    }
     
     private func switchLabels() {
         var tempText = self.leftLabel2.text
@@ -192,34 +150,13 @@ import UIKit
     }
     
     private func setLabelsAlpha(blockNumber: Int) {
-        if blockNumber == 1  || blockNumber == 5{
-            self.leftLabel2.alpha = 1.0
-            self.rightLabel2.alpha = 1.0
-            self.leftLabel1.alpha  = 0.0
-            self.rightLabel1.alpha = 0.0
-        }
-        else if blockNumber == 2  {
-            self.leftLabel1.alpha = 1.0
-            self.rightLabel1.alpha = 1.0
-            self.leftLabel2.alpha = 0.0
-            self.rightLabel2.alpha = 0.0
-        }
-            
-            
-        else {
-            self.leftLabel1.alpha = 1.0
-            self.rightLabel1.alpha = 1.0
-            self.leftLabel2.alpha = 1.0
-            self.rightLabel2.alpha = 1.0
-        }
+       
     }
     
     // MARK: - EBTestDataDelegate
     
     func finishedInitData() {
-        waitingIndicator?.removeFromSuperview()
-        didFinishLoadingData = true
-    }
+        }
     
     func failedInitData() {
         var alertView = UIAlertView(title: "Error", message: "Fatal error in loading test", delegate: nil, cancelButtonTitle: "OK")
@@ -247,80 +184,19 @@ import UIKit
     }
     
     func showBlock(blockNumber: Int) {
-        if blockNumber == 2 {
-            var block = Block2View(frame: self.view.frame, delegate: self)
-            self.view.addSubview(block)
-            self.view.bringSubviewToFront(block)
-        }
-        else if blockNumber == 3 {
-            var block = Block3View(frame: self.view.frame, delegate: self)
-            self.view.addSubview(block)
-            self.view.bringSubviewToFront(block)
-        }
-        else if blockNumber == 4 || blockNumber == 7 {
-            var block = BlockSameView(frame: self.view.frame, delegate: self)
-            self.view.addSubview(block)
-            self.view.bringSubviewToFront(block)
-        }
-        else if blockNumber == 5 {
-            var block = Block5View(frame: self.view.frame, delegate: self)
-            self.view.addSubview(block)
-            self.view.bringSubviewToFront(block)
-        }
-        else if blockNumber == 6 {
-            var block = Block6View(frame: self.view.frame, delegate: self)
-            self.view.addSubview(block)
-            self.view.bringSubviewToFront(block)
-        }
+       
     }
     
     func testFinished() {
-        var isCorrelate = (self.leftLabel1.text == "Desired Names" && self.leftLabel2.text == "Good Words") || (self.rightLabel1.text == "Desired Names" && self.rightLabel1.text == "Good Words") ? true : false
-        EBTestData.sharedInstance.calculateResults(isCorrelate)
-        
-        waitingIndicator = EBWaitingIndicator(frame: self.view.frame)
-        waitingIndicator!.showWaitingLabel()
-        self.view.addSubview(waitingIndicator!)
-        self.view.bringSubviewToFront(waitingIndicator!)
-        
-        delay(2.0, { () -> () in
-            self.waitingIndicator?.removeFromSuperview()
-            self.performSegueWithIdentifier("Show Results", sender: self)
-        })
-    }
+           }
     
     func wordCorrect() {
-        self.nameLabel.alpha = 0.0
-        delay(0.5, { () -> () in
-            EBTestData.sharedInstance.getNext()
-        })
+       
         
     }
     
     func wordIncorrect() {
-        
-        self.rightPartButton.userInteractionEnabled = true
-        self.leftPartButton.userInteractionEnabled = true
-        
-        if !didShowFirstMistake {
-            didShowFirstMistake = true
-            var firstTimeFailed = EBFirstMistakeView(frame: self.view.frame)
-            self.view.addSubview(firstTimeFailed)
-            self.view.bringSubviewToFront(firstTimeFailed)
-        }
-        
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.errorLabel.alpha = 1.0
-            
-            }) { (completed) -> Void in
-                delay(3, { () -> () in
-                    UIView.animateWithDuration(0.5, animations: { () -> Void in
-                        self.errorLabel.alpha = 0.0
-                    })
-                    
-                })
-        }
+       
     }
     
     func checkIfCanStartTest() {
@@ -342,34 +218,10 @@ import UIKit
     
     // MARK: - EBTestMenuViewDelegate
     func resumeTestSelected() {
-        var countdown = CountDownView(frame: self.view.frame) { () -> () in
-            self.startTime = CACurrentMediaTime()
-        }
-        self.view.addSubview(countdown)
-        self.view.bringSubviewToFront(countdown)
+      
     }
     func restartTestSelected() {
         
-        waitingIndicator = EBWaitingIndicator(frame: self.view.frame)
-        self.view.addSubview(waitingIndicator!)
-        self.view.bringSubviewToFront(waitingIndicator!)
-        
-        
-        didFinishLoadingData = false
-        
-        self.nameLabel.alpha = 0.0
-        self.leftLabel2.alpha = 0.0
-        self.rightLabel2.alpha = 0.0
-        self.leftLabel1.alpha  = 0.0
-        self.rightLabel1.alpha = 0.0
-        
-        self.currentBlock = 1;
-        
-        EBTestData.sharedInstance.resetData()
-        EBTestData.sharedInstance.initData(self.desiredNams, undesiredNames: self.undesiredNames, delegate: self)
-        
-        
-        startTestTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: Selector("checkIfCanStartTest"), userInfo: nil, repeats: true)
         
     }
     func returnToMenuSelected() {

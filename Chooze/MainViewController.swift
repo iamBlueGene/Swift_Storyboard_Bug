@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
     
     let k_smallScreenSizeConstant:CGFloat = 30
     let k_isSmallScreen = UIScreen.mainScreen().bounds.size.height == 480 ? true:false
-    weak var iapView: EBInAppPurchasesView?
     
     var shouldAllowBackButton = true
     
@@ -30,22 +29,12 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
-        if PFUser.currentUser() == nil {
-            shouldAllowBackButton = false
-            performSegueWithIdentifier("LogIn", sender: nil)
-            return
-        }
+     
 
         
         self.navigationController?.navigationBar.hidden = true
 
-        if PFUser.currentUser() == nil {
-            shouldAllowBackButton = false
-            performSegueWithIdentifier("LogIn", sender: nil)
-            return
-        }
+      
         isIphone4Model()
         
     }
@@ -70,34 +59,14 @@ class MainViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func inviteButtonPressed(sender: AnyObject) {
-        if let currentUser = PFUser.currentUser() {
-            EBFacebookService.sharedInstance.inviteFacebookFriends()
-        }
-        else {
-            performSegueWithIdentifier("LogIn", sender: self)
-        }
+     
     }
     
     @IBAction func iapButtonPressed(sender: AnyObject) {
-        if (iapView == nil) {
-            var iapView2 = EBInAppPurchasesView()
-            iapView2.center = self.view.center
-            self.view.addSubview(iapView2)
-            self.view.bringSubviewToFront(iapView2)
-            self.iapView = iapView2
-        }
-
+        
     }
     @IBAction func beginTestButtonPressed(sender: AnyObject) {
-        if let howManyTestsLeft :NSNumber = NSUserDefaults.standardUserDefaults().objectForKey("testsLeft") as? NSNumber {
-            
-            if howManyTestsLeft.intValue > 0 {
-                self.performSegueWithIdentifier("EnterNames", sender: self)
-            } else {
-                var alertView = UIAlertView(title: "Error", message: "You don't have enough tests, please purchase more", delegate: self, cancelButtonTitle: "OK")
-                alertView.show()
-            }
-        }
+     
     }
     @IBAction func settingsButtonPressed(sender: AnyObject) {
         
