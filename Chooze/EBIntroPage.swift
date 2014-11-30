@@ -26,6 +26,7 @@ class EBIntroPage: UIView {
     convenience init(imageName :String, infoText: String,delegate :EBIntroPageProtocol, frame :CGRect) {
         self.init(delegate: delegate, frame: frame)
         self.loadViewsFromBundle()
+        self.contentView.frame = self.frame
         self.infoImage.image = UIImage(named: imageName)
         self.infoLabel.text = infoText
     }

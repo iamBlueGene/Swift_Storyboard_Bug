@@ -14,9 +14,12 @@ class EBFileReader: NSObject {
         var contentsArray = Array<String>()
         
         var language = ChoozeUtils.getLanguage()
-        var fileName = language + "IntroPagesInfo"
+        //TODO: Change back to real language
+        //var fileName = language + "IntroPagesInfo"
+        var fileName = "en" + "IntroPagesInfo"
         if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "cif") {
-            if let fileContents = String.stringWithContentsOfFile(filePath, encoding: NSUTF8StringEncoding, error: nil) {
+
+            if let fileContents = NSString(contentsOfFile:filePath, encoding:NSUTF8StringEncoding, error: nil) as? String {
                 contentsArray = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 
                 for var i = 0; i < contentsArray.count; i++ {
@@ -35,7 +38,8 @@ class EBFileReader: NSObject {
         var language = ChoozeUtils.getLanguage()
         var fileName = language + "QuestionsInfo"
         if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "cif") {
-            if let fileContents = String.stringWithContentsOfFile(filePath, encoding: NSUTF8StringEncoding, error: nil) {
+
+            if let fileContents = NSString(contentsOfFile:filePath, encoding:NSUTF8StringEncoding, error: nil) as? String {
                 contentsArray = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 return contentsArray
             }
@@ -48,7 +52,20 @@ class EBFileReader: NSObject {
         var language = ChoozeUtils.getLanguage()
         var fileName = language + "AnswersInfo"
         if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "cif") {
-            if let fileContents = String.stringWithContentsOfFile(filePath, encoding: NSUTF8StringEncoding, error: nil) {
+            if let fileContents = NSString(contentsOfFile:filePath, encoding:NSUTF8StringEncoding, error: nil) as? String {
+                contentsArray = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+                return contentsArray
+            }
+        }
+        return contentsArray
+    }
+    
+    class func getWords(name :String) -> Array<String> {
+        var contentsArray = Array<String>()
+        var language = ChoozeUtils.getLanguage()
+        var fileName = language + name
+        if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: "cif") {
+            if let fileContents = NSString(contentsOfFile:filePath, encoding:NSUTF8StringEncoding, error: nil) as? String {
                 contentsArray = fileContents.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
                 return contentsArray
             }

@@ -32,6 +32,10 @@ class EBTestNamesDataHandler: NSObject {
         return currentNames
     }
     
+    func getUnavilableNames() -> Array<String> {
+        return unavilableNames
+    }
+    
     func canAddName(name :String) -> Bool {
         if name.isEmpty {
             let alertView = UIAlertView(title: "Error", message: "Can't add an empty name", delegate: nil, cancelButtonTitle: "OK")

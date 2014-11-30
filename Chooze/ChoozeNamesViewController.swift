@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChoozeNamesViewController: UIViewController {
+class ChoozeNamesViewController: UIViewController, UIGestureRecognizerDelegate, ChooseFirstNameExpViewDelegate {
     
     // MARK: - IBOutlets
     
@@ -27,6 +27,8 @@ class ChoozeNamesViewController: UIViewController {
     private var unavilableNames:Array<String>?
     private var stepNumber = 1
     private var onceToken : dispatch_once_t = 0
+    private var onceToken2 : dispatch_once_t = 0
+    private var didShowInstructions = false
     private var tagListViewStatus = EBTagListStatus.Normal
     private var isKeyboardUp = false
     
@@ -46,6 +48,11 @@ class ChoozeNamesViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        if ChoozeUtils.sharedInstance.shouldGoToMenu {
+            self.navigationController?.popToRootViewControllerAnimated(false)
+            ChoozeUtils.sharedInstance.shouldGoToMenu = false
+        }
+        
         registerForKeyboardNotifications()
         
         self.tagListView.updateNamesToHandler()
@@ -56,12 +63,23 @@ class ChoozeNamesViewController: UIViewController {
         {
             makeStep1()
         }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        dispatch_once(&onceToken) {
-            self.tagListView.startWritingNames()
+        if !didShowInstructions {
+            dispatch_once(&onceToken2) {
+                var darkView = ChooseFirstNameExpView(frame: self.view.frame, delegate: self)
+                self.view.addSubview(darkView)
+                self.view.bringSubviewToFront(darkView)
+                self.didShowInstructions = true
+            }
+        } else {
+            dispatch_once(&onceToken) {
+                self.tagListView.startWritingNames()
+            }
         }
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -69,27 +87,56 @@ class ChoozeNamesViewController: UIViewController {
             if stepNumber == 1 {
                 var viewController = segue.destinationViewController as ChoozeNamesViewController
                 viewController.stepNumber = 2
+                viewController.didShowInstructions = true
                 viewController.unavilableNames = EBTestNamesDataHandler.shardInstance.getCurrentNames()
             }
         }
+        else if segue.identifier == "BeginTest" {
+            
+            var navigationController = segue.destinationViewController as EBLandscapeNavigationController
+            //var viewController = navigationController.topViewController as TestViewController
+            //viewController.desiredNams = EBTestNamesDataHandler.shardInstance.getUnavilableNames()
+            //viewController.undesiredNames = EBTestNamesDataHandler.shardInstance.getCurrentNames()
+            //viewController.prevViewController = self
+        }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
         return ((sender as NSObject) == self)
     }
+    
+    
     
     // MARK: - IBActions
     
     @IBAction func continueButtonPressed(sender: AnyObject) {
-        if stepNumber == 2 {
-            if EBTestNamesDataHandler.shardInstance.canStartTest() {
-                self.performSegueWithIdentifier("BeginTest", sender: self)
+        if tagListView.getStatus() == EBTagListStatus.Normal {
+            if stepNumber == 2 {
+                if EBTestNamesDataHandler.shardInstance.canStartTest() {
+                    self.performSegueWithIdentifier("StartTest2", sender: self)
+                }
             }
-        }
-        else {
-            if EBTestNamesDataHandler.shardInstance.canGoToStepTwo() {
-            self.performSegueWithIdentifier("NextStepSegue", sender: self)
+            else {
+                if EBTestNamesDataHandler.shardInstance.canGoToStepTwo() {
+                    self.performSegueWithIdentifier("NextStepSegue", sender: self)
+                }
             }
+        } else if tagListView.getStatus() == EBTagListStatus.AddingName {
+            var a = tagListView.addNameWhenContinueButtonPressed({ () -> () in
+                
+                    if self.stepNumber == 2 {
+                        if EBTestNamesDataHandler.shardInstance.canStartTest() {
+                            self.performSegueWithIdentifier("BeginTest", sender: self)
+                        }
+                    }
+                    else {
+                        if EBTestNamesDataHandler.shardInstance.canGoToStepTwo() {
+                            self.performSegueWithIdentifier("NextStepSegue", sender: self)
+                        }
+                    }
+                
+            })
+            
         }
     }
     
@@ -174,5 +221,19 @@ class ChoozeNamesViewController: UIViewController {
         }
         
     }
+    
+    //MARK: -  UIGestureRecognizerDelegate
+    @IBAction func tapGestureReconized(sender: AnyObject) {
+        let touchLocation = sender.locationInView(self.tagListView)
+        self.tagListView.removeFirstResponder()
+    }
+    
+    //MARK: - ChooseFirstNameExpViewDelegate 
+    func ChooseFirstNameExpViewClosed() {
+        dispatch_once(&onceToken) {
+            self.tagListView.startWritingNames()
+        }
+    }
+    
     
 }

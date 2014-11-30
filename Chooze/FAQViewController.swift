@@ -96,6 +96,10 @@ class FAQViewController: UIViewController, UITableViewDataSource, UITableViewDel
             let transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(rads))
             imageView.transform = transform
         })
+        
+        self.howMuchToAdd = 0
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
     }
     
 

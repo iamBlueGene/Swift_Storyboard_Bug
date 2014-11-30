@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EBBlock6View" customModule="Chooze" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="tJR-VQ-WKl" id="SzX-fL-wW2"/>
+                <outlet property="okButton" destination="KDP-SC-dkV" id="FnL-oG-wrr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tJR-VQ-WKl">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ku5-CN-hht">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDP-SC-dkV">
+                            <rect key="frame" x="604" y="321" width="55" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="U7d-Mk-H3Z"/>
+                                <constraint firstAttribute="height" constant="46" id="dE5-2D-Kto"/>
+                            </constraints>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="hxK-A9-dSa"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instra1name" translatesAutoresizingMaskIntoConstraints="NO" id="xxS-7z-ywf">
+                            <rect key="frame" x="258" y="161" width="150" height="77"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="66j-YW-3jk"/>
+                                <constraint firstAttribute="width" constant="150" id="yfW-OE-j0L"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undesired Names Good Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twb-ub-SPL">
+                            <rect key="frame" x="40" y="149" width="138" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="138" id="MSI-NW-019"/>
+                                <constraint firstAttribute="height" constant="42" id="Mn6-Xd-XRG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desired Names Bad Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN8-Zi-CnW">
+                            <rect key="frame" x="503" y="149" width="124" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="bfO-st-qWi"/>
+                                <constraint firstAttribute="width" constant="124" id="q2D-pq-ehZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ki2-zk-tMJ">
+                            <rect key="frame" x="179" y="246" width="308" height="86"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="308" id="dNF-rB-UoF"/>
+                                <constraint firstAttribute="height" constant="86" id="igN-R0-U2t"/>
+                            </constraints>
+                            <string key="text">Now it’s getting even
+more confusing; We’re back 
+at two categories though 
+now one sub-category will switch sides.</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="xxS-7z-ywf" firstAttribute="top" secondItem="twb-ub-SPL" secondAttribute="bottom" constant="-30" id="59j-jg-g3Z"/>
+                        <constraint firstAttribute="trailing" secondItem="dN8-Zi-CnW" secondAttribute="trailing" constant="40" id="72Q-hW-5r4"/>
+                        <constraint firstAttribute="bottom" secondItem="KDP-SC-dkV" secondAttribute="bottom" constant="8" id="9gr-jp-d4D"/>
+                        <constraint firstAttribute="centerX" secondItem="Ki2-zk-tMJ" secondAttribute="centerX" constant="0.5" id="NPB-xE-hVR"/>
+                        <constraint firstAttribute="centerY" secondItem="xxS-7z-ywf" secondAttribute="centerY" constant="-12" id="Paa-0N-Pic"/>
+                        <constraint firstAttribute="centerX" secondItem="xxS-7z-ywf" secondAttribute="centerX" constant="0.5" id="QUE-fE-FX7"/>
+                        <constraint firstItem="xxS-7z-ywf" firstAttribute="top" secondItem="dN8-Zi-CnW" secondAttribute="bottom" constant="-30" id="fdW-Vn-Lqp"/>
+                        <constraint firstItem="Ki2-zk-tMJ" firstAttribute="top" secondItem="xxS-7z-ywf" secondAttribute="bottom" constant="8" id="nj2-ax-Dpg"/>
+                        <constraint firstAttribute="trailing" secondItem="KDP-SC-dkV" secondAttribute="trailing" constant="8" id="osS-K1-kBN"/>
+                        <constraint firstItem="twb-ub-SPL" firstAttribute="leading" secondItem="ku5-CN-hht" secondAttribute="leading" constant="40" id="w9a-aF-oEt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ku5-CN-hht" firstAttribute="top" secondItem="tJR-VQ-WKl" secondAttribute="top" id="KEH-LE-n73"/>
+                <constraint firstItem="ku5-CN-hht" firstAttribute="leading" secondItem="tJR-VQ-WKl" secondAttribute="leading" id="Wj1-jb-bWY"/>
+                <constraint firstAttribute="bottom" secondItem="ku5-CN-hht" secondAttribute="bottom" id="kGn-Nj-XeU"/>
+                <constraint firstAttribute="trailing" secondItem="ku5-CN-hht" secondAttribute="trailing" id="wK0-ZA-2v2"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="435.5" y="469.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="instra1name" width="174" height="86"/>
+    </resources>
+</document>

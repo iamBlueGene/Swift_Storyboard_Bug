@@ -62,8 +62,7 @@ class EBParseService: NSObject {
     
     class func signUpUser(username: String, password: String, completionClosure :((error :NSError?) -> ())) {
         var user = PFUser()
-        let uuid = NSUUID.UUID().UUIDString
-        user.username = uuid
+        user.username = username
         user.email = username
         user.password = password
         
@@ -73,6 +72,50 @@ class EBParseService: NSObject {
             }
             else {
                 completionClosure(error: error)
+            }
+        }
+    }
+    
+    class func getGoodWords(completionClosue :((words: Array<String>) -> ())) {
+        let lang = ChoozeUtils.getLanguage()
+        let wordsQuery = PFQuery(className: "GoodTestWords")
+        wordsQuery.whereKey("language", equalTo: lang)
+        wordsQuery.findObjectsInBackgroundWithBlock { (words, error) -> Void in
+            if error != nil {
+                //ChoozeUtils.showError(error)
+            }
+            if let tWords:Array<String> = words as? Array<String> {
+                completionClosue(words: tWords)
+            }
+            
+        }
+    }
+    
+    class func getBadWords(completionClosue :((words: Array<String>) -> ())) {
+        let lang = ChoozeUtils.getLanguage()
+        let wordsQuery = PFQuery(className: "BadTestWords")
+        wordsQuery.whereKey("language", equalTo: lang)
+        wordsQuery.findObjectsInBackgroundWithBlock { (words, error) -> Void in
+            if error != nil {
+                //ChoozeUtils.showError(error)
+            }
+            if let tWords:Array<String> = words as? Array<String> {
+                completionClosue(words: tWords)
+            }
+            
+        }
+    }
+    
+    class func getWhichTypeOfBlocksToStartWith(completionClosue: ((type: Int) -> ())) {
+        let typeQuery = PFQuery(className: "TestSettings")
+        typeQuery.whereKey("propertyType", equalTo: "WhichTypeOfBlockFirst")
+        typeQuery.findObjectsInBackgroundWithBlock { (settings, error) -> Void in
+            if error != nil {
+                //ChoozeUtils.showError(error)
+            }
+            if let tSettings = settings as? Array<String> {
+                let type = tSettings.first!
+                completionClosue(type: type.toInt()!)
             }
         }
     }

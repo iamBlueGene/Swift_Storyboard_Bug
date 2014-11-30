@@ -25,7 +25,7 @@ class EBIntroView: NSObject, EBIntroPageProtocol, UIScrollViewDelegate {
     }
     
     override init() {
-        self.window = UIWindow(frame: UIApplication.sharedApplication().keyWindow.frame)
+        self.window = UIWindow(frame: UIApplication.sharedApplication().keyWindow!.frame)
         self.window!.windowLevel = UIWindowLevelAlert
         
         self.pageControl = UIPageControl(frame: CGRectMake(0, 0, 200, 50))

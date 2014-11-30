@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseFirstNameExpView" customModule="Chooze" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="CmB-cq-vd0"/>
+                <outlet property="okButton" destination="4RU-sy-ufe" id="zca-BZ-ZX8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhH-bt-9wl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RU-sy-ufe">
+                            <rect key="frame" x="160" y="392" width="55" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="KtK-cM-GBK"/>
+                                <constraint firstAttribute="height" constant="46" id="Nlw-9W-FQ9"/>
+                            </constraints>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="50m-xM-0oT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvO-q1-PM7">
+                            <rect key="frame" x="45" y="285" width="284" height="97"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="97" id="Y9d-hZ-2nh"/>
+                                <constraint firstAttribute="width" constant="284" id="z2B-Eo-Byn"/>
+                            </constraints>
+                            <string key="text">It is recommended that you only enter
+2-3 names. If you have more, please
+split them into separate tests.</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4RU-sy-ufe" firstAttribute="centerX" secondItem="gvO-q1-PM7" secondAttribute="centerX" constant="0.5" id="6gg-IZ-rXN"/>
+                        <constraint firstAttribute="centerX" secondItem="gvO-q1-PM7" secondAttribute="centerX" constant="0.5" id="6uz-td-zyw"/>
+                        <constraint firstAttribute="centerY" secondItem="gvO-q1-PM7" secondAttribute="centerY" id="7Ub-bj-8Ey"/>
+                        <constraint firstItem="4RU-sy-ufe" firstAttribute="top" secondItem="gvO-q1-PM7" secondAttribute="bottom" constant="10" id="Qop-6h-O8S"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GhH-bt-9wl" secondAttribute="bottom" id="hFW-Eh-Na8"/>
+                <constraint firstItem="GhH-bt-9wl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ibp-Fe-Ekv"/>
+                <constraint firstItem="GhH-bt-9wl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="j0V-dA-GWe"/>
+                <constraint firstAttribute="trailing" secondItem="GhH-bt-9wl" secondAttribute="trailing" id="jpC-Te-uJa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

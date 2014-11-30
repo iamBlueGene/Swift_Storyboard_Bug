@@ -8,19 +8,29 @@
 
 import UIKit
 
-class ResetPasswordViewController: UIViewController {
+class ResetPasswordViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextFieldView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.usernameTextField.delegate = self
+        self.usernameTextField.becomeFirstResponder()
+        
+        setTextFieldViewDesign(emailTextFieldView)
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setTextFieldViewDesign(textFieldView: UIView) {
+        textFieldView.layer.borderWidth = 1
+        textFieldView.layer.borderColor = UIColor.whiteColor().CGColor
+        textFieldView.layer.cornerRadius = 5
     }
     
 
@@ -30,11 +40,22 @@ class ResetPasswordViewController: UIViewController {
                 if error != nil {
                     ChoozeUtils.showError(error!)
                 } else {
-                    self.navigationController?.popToRootViewControllerAnimated(true)
+                    var alertView = UIAlertView(title: "Reset", message: "Reset email has been sent to your mail", delegate: nil, cancelButtonTitle: "OK")
+                    alertView.show()
+                    
+                    var prevVc:UIViewController = self.navigationController?.viewControllers[1] as UIViewController
+                    self.navigationController?.popToViewController(prevVc, animated: true)
                 }
             })
 
         }
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        resetPasswordButtonPressed(self)
+        return true
     }
     /*
     // MARK: - Navigation

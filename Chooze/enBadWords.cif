@@ -1,0 +1,4 @@
+Hate
+Death
+Anger
+Disease

@@ -22,7 +22,7 @@ class EBLandscapeNavigationController: UINavigationController {
     }
     
     override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.LandscapeRight.toRaw());
+        return Int(UIInterfaceOrientationMask.Landscape.rawValue);
     }
     
 

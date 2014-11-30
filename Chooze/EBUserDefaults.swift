@@ -27,5 +27,27 @@ class EBUserDefaults: NSObject {
         return didRun
     }
     
+    func didShowChooseNamesInsturctions() -> Bool {
+        var didShow = NSUserDefaults.standardUserDefaults().boolForKey("didShowChooseNamesInsturctions")
+        if didShow {
+            return true
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "didShowChooseNamesInsturctions")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            return false
+        }
+    }
+    
+    func didTakeTest() -> Bool {
+        var didTakeTest = NSUserDefaults.standardUserDefaults().boolForKey("didTakeTest")
+        if didTakeTest {
+            return true
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "didTakeTest")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            return false
+        }
+    }
+        
     
 }

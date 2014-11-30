@@ -28,7 +28,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.11</string>
 	<key>FacebookAppID</key>
 	<string>562310593870930</string>
 	<key>FacebookDisplayName</key>
@@ -53,5 +53,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>ubertesters_organization_token</key>
+	<string>5a7f5bfc-4a5c-11e4-8fc4-22000ac44c54</string>
 </dict>
 </plist>

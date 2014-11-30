@@ -15,6 +15,7 @@ class EBTagListView: UIView, EBTagViewDelegate {
     private let k_AddButtonSizeShiftingConstant:CGFloat = 67
     private let k_NewTagViewPlacementConstant:CGFloat = 6
     private let k_NewLinePlacenebtConstant:CGFloat = 49
+    private let k_RegularSizeButton:CGFloat = 110
     
     private var status = 0
     //private var outStatus = EBTagListStatus.Normal
@@ -102,8 +103,16 @@ class EBTagListView: UIView, EBTagViewDelegate {
 
     }
     
-    private func removeFirstResponder() {
+    func removeFirstResponder() {
         if status == EBTagListStatus.Editing {
+            self.nameTagView?.removeKeyboard()
+            var index = find(self.nameViews, self.nameTagView!)
+            self.nameViews.removeAtIndex(index!)
+            self.nameTagView?.removeFromSuperview()
+            self.nameTagView = nil
+            self.canceledWriting()
+        }
+        else if status == EBTagListStatus.AddingName {
             self.nameTagView?.removeKeyboard()
             var index = find(self.nameViews, self.nameTagView!)
             self.nameViews.removeAtIndex(index!)
@@ -155,6 +164,23 @@ class EBTagListView: UIView, EBTagViewDelegate {
         return false
     }
     
+    func getStatus() -> Int {
+        return status
+    }
+    
+    func addNameWhenContinueButtonPressed(closure: (() ->())) -> Bool {
+        var  answer = self.tryToAddName(nameTagView!.getName(), nameView: nameTagView!)
+        if answer {
+            self.finishedWriting()
+            delay(0.3, { () -> () in
+                closure()
+            })
+        }
+        return false
+    }
+    
+    
+    
     
     // MARK: - EBTagViewDelegate 
     func finishedWriting() {
@@ -181,7 +207,7 @@ class EBTagListView: UIView, EBTagViewDelegate {
     
     private func addNameButtonRegular() {
         self.addNameButton.setTitle("Add Name", forState: UIControlState.Normal)
-        self.addNameButtonWidthConstrain.constant = self.addNameButtonWidthConstrain.constant + self.k_AddButtonSizeShiftingConstant;
+        self.addNameButtonWidthConstrain.constant = k_RegularSizeButton
     }
 
     func nameChanged() {

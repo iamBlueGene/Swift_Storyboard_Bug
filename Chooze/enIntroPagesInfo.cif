@@ -1,4 +1,4 @@
-Welcome to Chooze! \n The app that helps you \n Chooze your baby’s name.
+Welcome to Chooze! \n The app that helps you \n 'Chooze' your baby’s name.
 We recommend that you take this \n test in a room with no interruptions. \n Chooze works better this way.
-Chooze is based on psychological \n research The test can measure what \n names you  like/dislike the most. Even if  your true  preference is subconscious.
+Chooze is based on psychological \n research. The test can measure what \n names you  like/dislike the most. Even if  your true  preference is subconscious.
 When you begin the test you will be \n asked to enter your favorite names, \n but also names you really dislike. \n (And would never give your child).

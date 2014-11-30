@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EBInAppPurchasesView" customModule="Chooze" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="iEU-LC-x66"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2X2 pixel dark gradien" translatesAutoresizingMaskIntoConstraints="NO" id="CAn-mR-S0o">
+                    <rect key="frame" x="5" y="5" width="240" height="290"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYB-9O-WwF">
+                    <rect key="frame" x="13" y="6" width="224" height="82"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infiniteTests" translatesAutoresizingMaskIntoConstraints="NO" id="3Bs-ky-Fg6">
+                            <rect key="frame" x="3" y="7" width="77" height="68"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="77" id="DcU-N9-2oz"/>
+                                <constraint firstAttribute="height" constant="68" id="cS1-YB-vZF"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bn3-k7-VUq">
+                            <rect key="frame" x="150" y="55" width="74" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="VlY-Gf-7ra"/>
+                                <constraint firstAttribute="width" constant="74" id="dVu-Jb-Idb"/>
+                            </constraints>
+                            <state key="normal" title="Get It" backgroundImage="getItButton">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buyIapButtonPressed:" destination="-1" eventType="touchUpInside" id="FZy-AT-3iL"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited tests for $1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efd-Zo-kdg">
+                            <rect key="frame" x="70" y="7" width="147" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="147" id="0Gu-Qb-wXh"/>
+                                <constraint firstAttribute="height" constant="22" id="SyO-Ut-ceF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15.5"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="efd-Zo-kdg" secondAttribute="trailing" constant="7" id="3Os-uy-cTV"/>
+                        <constraint firstAttribute="height" constant="82" id="6Sr-Xp-SOO"/>
+                        <constraint firstItem="3Bs-ky-Fg6" firstAttribute="leading" secondItem="EYB-9O-WwF" secondAttribute="leading" constant="3" id="HC6-vs-MIb"/>
+                        <constraint firstAttribute="bottom" secondItem="Bn3-k7-VUq" secondAttribute="bottom" id="KoH-4c-se3"/>
+                        <constraint firstItem="efd-Zo-kdg" firstAttribute="top" secondItem="EYB-9O-WwF" secondAttribute="top" constant="7" id="YI5-QT-6MM"/>
+                        <constraint firstAttribute="width" constant="224" id="kco-vD-xKC"/>
+                        <constraint firstItem="3Bs-ky-Fg6" firstAttribute="top" secondItem="EYB-9O-WwF" secondAttribute="top" constant="7" id="uLx-iO-9oa"/>
+                        <constraint firstAttribute="trailing" secondItem="Bn3-k7-VUq" secondAttribute="trailing" id="ybG-5a-XF8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sq3-JP-ovl">
+                    <rect key="frame" x="5" y="94" width="240" height="82"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftTests" translatesAutoresizingMaskIntoConstraints="NO" id="mPu-gZ-67P">
+                            <rect key="frame" x="8" y="8" width="62" height="66"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="4bo-eO-UvA"/>
+                                <constraint firstAttribute="width" constant="62" id="Hoz-GV-wZo"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send unlimited tests as a gift to a friend" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYD-HT-2gR">
+                            <rect key="frame" x="77" y="8" width="155" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="155" id="fs0-1H-ZyR"/>
+                                <constraint firstAttribute="height" constant="36" id="wmA-rh-tRB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kD-hC-qsJ">
+                            <rect key="frame" x="158" y="55" width="74" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="74" id="7Zp-40-VJd"/>
+                                <constraint firstAttribute="height" constant="27" id="yW2-JI-ez3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13.5"/>
+                            <state key="normal" title="Gift Friend" backgroundImage="getItButton">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="dYD-HT-2gR" firstAttribute="leading" secondItem="mPu-gZ-67P" secondAttribute="trailing" constant="7" id="30X-qe-QFO"/>
+                        <constraint firstAttribute="trailing" secondItem="5kD-hC-qsJ" secondAttribute="trailing" constant="8" id="5AA-om-3OX"/>
+                        <constraint firstAttribute="width" constant="240" id="FzB-UT-d8F"/>
+                        <constraint firstItem="mPu-gZ-67P" firstAttribute="leading" secondItem="sq3-JP-ovl" secondAttribute="leading" constant="8" id="OWh-RK-bUq"/>
+                        <constraint firstItem="mPu-gZ-67P" firstAttribute="top" secondItem="sq3-JP-ovl" secondAttribute="top" constant="8" id="VJN-CX-89D"/>
+                        <constraint firstItem="dYD-HT-2gR" firstAttribute="top" secondItem="sq3-JP-ovl" secondAttribute="top" constant="8" id="odk-zZ-gBc"/>
+                        <constraint firstAttribute="bottom" secondItem="5kD-hC-qsJ" secondAttribute="bottom" id="t6i-Sb-Gf0"/>
+                        <constraint firstAttribute="height" constant="82" id="yzD-BE-G7A"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r4S-1I-wWS">
+                    <rect key="frame" x="13" y="182" width="225" height="82"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8D7-ZV-t4M">
+                            <rect key="frame" x="69" y="0.0" width="139" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="139" id="0i8-7u-Tqc"/>
+                                <constraint firstAttribute="height" constant="41" id="6iV-oj-AL4"/>
+                            </constraints>
+                            <string key="text">Get a free test for 
+every friend that joins</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ass-t2-lzP">
+                            <rect key="frame" x="150" y="55" width="74" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="27" id="Snc-oe-G4j"/>
+                                <constraint firstAttribute="width" constant="74" id="a4H-A6-dE5"/>
+                            </constraints>
+                            <state key="normal" title="Invite" backgroundImage="getItButton">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="inviteFriends:" destination="-1" eventType="touchUpInside" id="0gk-n3-fiL"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="getTestsForFriends" translatesAutoresizingMaskIntoConstraints="NO" id="w37-5A-PVS">
+                            <rect key="frame" x="0.0" y="4" width="62" height="78"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="78" id="Gye-Yf-WkX"/>
+                                <constraint firstAttribute="width" constant="62" id="xKk-29-LQo"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="w37-5A-PVS" firstAttribute="leading" secondItem="r4S-1I-wWS" secondAttribute="leading" id="0Ed-TQ-IZN"/>
+                        <constraint firstAttribute="width" constant="225" id="M1z-OT-XRu"/>
+                        <constraint firstItem="w37-5A-PVS" firstAttribute="top" secondItem="r4S-1I-wWS" secondAttribute="top" constant="4" id="MoY-HA-ygM"/>
+                        <constraint firstItem="8D7-ZV-t4M" firstAttribute="top" secondItem="r4S-1I-wWS" secondAttribute="top" id="RHV-l8-XJa"/>
+                        <constraint firstAttribute="trailing" secondItem="8D7-ZV-t4M" secondAttribute="trailing" constant="17" id="Sd2-rf-i0k"/>
+                        <constraint firstAttribute="bottom" secondItem="ass-t2-lzP" secondAttribute="bottom" id="cEv-QG-t9L"/>
+                        <constraint firstAttribute="height" constant="82" id="eUl-ha-4a1"/>
+                        <constraint firstAttribute="trailing" secondItem="ass-t2-lzP" secondAttribute="trailing" constant="1" id="mqc-4w-MmU"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-5K-7l0">
+                    <rect key="frame" x="102" y="272" width="40" height="30"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="vM1-O7-E8H"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.28235294117647058" green="0.76078431372549016" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="sq3-JP-ovl" secondAttribute="centerX" id="VbF-D7-Xqx"/>
+                <constraint firstAttribute="centerX" secondItem="r4S-1I-wWS" secondAttribute="centerX" constant="-0.5" id="YZ5-YW-iuh"/>
+                <constraint firstAttribute="centerX" secondItem="EYB-9O-WwF" secondAttribute="centerX" id="fKI-at-5QQ"/>
+                <constraint firstItem="sq3-JP-ovl" firstAttribute="top" secondItem="EYB-9O-WwF" secondAttribute="bottom" constant="6" id="lnq-JT-Q6h"/>
+                <constraint firstItem="r4S-1I-wWS" firstAttribute="top" secondItem="sq3-JP-ovl" secondAttribute="bottom" constant="6" id="x3O-oh-cvb"/>
+                <constraint firstAttribute="centerY" secondItem="sq3-JP-ovl" secondAttribute="centerY" constant="15" id="xkw-Os-SIC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="359" y="110"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="2X2 pixel dark gradien" width="1" height="1"/>
+        <image name="getItButton" width="74" height="27"/>
+        <image name="getTestsForFriends" width="62" height="78"/>
+        <image name="giftTests" width="62" height="65"/>
+        <image name="infiniteTests" width="81" height="70"/>
+    </resources>
+</document>

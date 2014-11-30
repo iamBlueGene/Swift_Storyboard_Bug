@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 BlueGene. All rights reserved.
 //
 
-import UIKit
 
+
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("e4o2k4oyoHGtoSq2HLgo9YqjBkKYjJh0WSCSOVil", clientKey: "zHPgDnKfhWOTfNbhopfzjHNAIACt4mUtXJnlke3m")
         PFFacebookUtils.initializeFacebook()
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        //if (NSUserDefaults.standardUserDefaults().objectForKey("testsLeft") == nil) {
+            let newNumber = NSNumber(int: 2)
+            NSUserDefaults.standardUserDefaults().setObject(newNumber, forKey: "testsLeft")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        //}
+        
+        PFPurchase.addObserverForProduct("io.chooze.unlimited", block: { (transaction) -> Void in
+            
+            SKPaymentQueue.defaultQueue().finishTransaction(transaction as SKPaymentTransaction)
+            // Do some stuff
+        })
+        
+        //Ubertesters.shared().initialize()
 
         return true
     }

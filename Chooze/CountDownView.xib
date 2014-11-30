@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountDownView" customModule="Chooze" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="etF-Mv-WeX" id="0m1-14-X47"/>
+                <outlet property="numberLabel" destination="3Ux-NL-vLf" id="CRx-Ji-3I4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="etF-Mv-WeX">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWt-xN-wM5">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ux-NL-vLf">
+                            <rect key="frame" x="314" y="146" width="39" height="83"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="70"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="3Ux-NL-vLf" secondAttribute="centerX" id="fpH-hg-P6v"/>
+                        <constraint firstAttribute="centerY" secondItem="3Ux-NL-vLf" secondAttribute="centerY" id="haR-bT-juX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sWt-xN-wM5" secondAttribute="bottom" id="Mls-c1-rcJ"/>
+                <constraint firstAttribute="trailing" secondItem="sWt-xN-wM5" secondAttribute="trailing" id="f1H-Cn-rK2"/>
+                <constraint firstItem="sWt-xN-wM5" firstAttribute="top" secondItem="etF-Mv-WeX" secondAttribute="top" id="sQ5-c3-7Mh"/>
+                <constraint firstItem="sWt-xN-wM5" firstAttribute="leading" secondItem="etF-Mv-WeX" secondAttribute="leading" id="vHe-hw-YFl"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="435.5" y="469.5"/>
+        </view>
+    </objects>
+</document>
